@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+
+class conversion
+{
+    float I_C(float v)
+    {
+        int x;
+        cout<<"Choose the type of value"<<endl;
+        cin>>x;
+        switch (x)
+        {    case 1:
+                cout<<"Value is in inch"<<endl;
+                cout<<"The value in cm is :";
+                return (v*2.54);
+            case 2:
+                cout<<"Value is in CM"<<endl;
+                cout<<"The value in inch is :";
+                return (v/2.54);
+    }}
+
+     float M_KM(float v)
+    {int y;
+        //cout<<"Value to be converted"<<endl;
+        cout<<"Choose the type of value"<<endl;
+        cin>>y;
+
+
+        switch (y)
+        {    case 1:
+                cout<<"Value is in Mile"<<endl;
+                cout<<"The value in KM is :";
+                return (v*1.6);
+            case 2:
+                cout<<"Value is in KM"<<endl;
+                cout<<"The value in mile is :";
+                return (v/1.6);
+    }}
+
+   public:
+        friend void print(conversion obj);
+};
+        void print(conversion obj)
+        {
+            float v;
+             cout<<"Value to be converted"<<endl;
+        cin>>v;
+            cout<<""<<obj.I_C(v);
+            cout<<""<<obj.M_KM(v);
+        }
+
+
+int main()
+{
+      float v;
+      conversion obj;
+
+        print(obj);
+
+       // int M_KM(int v);
+
+}
+
